@@ -1,0 +1,18 @@
+﻿  parallel.cpp
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(22,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(33,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(46,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(48,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(57,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(59,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(63,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(67,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(68,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(79,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(81,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(85,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(87,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(92,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(94,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\parallel.cpp(96,22): warning C4018: <: несоответствие типов со знаком и без знака
+  parallel.vcxproj -> C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\parallel\parallel\Debug\parallel.exe
