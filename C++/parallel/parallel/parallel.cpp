@@ -9,9 +9,8 @@ using namespace std;
 
 int main()
 {
-
-	const int n = 100;
-	const int m = 100;
+	const int n = 1000;
+	const int m = 1000;
 	double result = 0;
 
 	//====================Вектор на число================================
@@ -19,8 +18,9 @@ int main()
 	const double Chislo = ((rand() % 20001) - 10000) / 100;
 
 	vector<double> mas1(n);
+#pragma omp parallel for
 	for (int i = 0; i < mas1.size(); i++) {
-		mas1[i] = (double)((rand() % 20001) - 10000) / 100;
+		mas1[i] = (double)((rand() % 2001) - 1000) / 100;
 		mas1[i] *= Chislo;
 	}
 	cout << "time(Vector on Number) = " << clock() / (double)CLOCKS_PER_SEC - tStart << endl;
@@ -30,9 +30,10 @@ int main()
 	vector<double> mas2_1(n);
 	vector<double> mas2_2(n);
 	double res2 = 0;
+#pragma omp parallel for
 	for (int i = 0; i < mas2_1.size(); i++) {
-		mas2_1[i] = (double)((rand() % 20001) - 10000) / 100;
-		mas2_2[i] = (double)((rand() % 20001) - 10000) / 100;
+		mas2_1[i] = (double)((rand() % 2001) - 1000) / 100;
+		mas2_2[i] = (double)((rand() % 2001) - 1000) / 100;
 		res2 += mas2_1[i] * mas2_2[i];
 	}
 	cout << "time(Vector on Vector) = " << clock() / (double)CLOCKS_PER_SEC - tStart << endl;
@@ -41,12 +42,14 @@ int main()
 
 	//====================Матрица на число================================
 	tStart = clock() / (double)CLOCKS_PER_SEC;
-	const double number = ((rand() % 20001) - 10000) / 100;
+	const double number = ((rand() % 2001) - 1000) / 100;
 	vector<vector<double>> mat3(n);
+#pragma omp parallel for
 	for (int i = 0; i < mat3.size(); i++) {
 		mat3[i].resize(n);
+#pragma omp parallel for
 		for (int j = 0; j < mat3[i].size(); j++) {
-			mat3[i][j] = ((rand() % 20001) - 10000) / 100;
+			mat3[i][j] = ((rand() % 2001) - 1000) / 100;
 			mat3[i][j] *= number;
 		}
 	}
@@ -54,17 +57,22 @@ int main()
 	//====================Матрица на вектор================================
 	vector<double> vec1(m);
 	vector<vector<double>> mat4(n);
+#pragma omp parallel for
 	for (int i = 0; i < mat4.size(); i++) {
 		mat4[i].resize(m);
+#pragma omp parallel for
 		for (int j = 0; j < mat4[i].size(); j++) {
-			mat4[i][j] = ((rand() % 20001) - 10000) / 100;
+			mat4[i][j] = ((rand() % 2001) - 1000) / 100;
 		}
 	}
+#pragma omp parallel for
 	for (int i = 0; i < vec1.size(); i++) {
-		vec1[i] = (double)((rand() % 20001) - 10000) / 100;
+		vec1[i] = (double)((rand() % 2001) - 1000) / 100;
 	}
 	vector<double> resVector(n);
+#pragma omp parallel for
 	for (int i = 0; i < mat4.size(); i++) {
+#pragma omp parallel for
 		for (int j = 0; j < mat4[i].size(); j++) {
 			resVector[i] += mat4[i][j] * vec1[j];
 		}
@@ -76,23 +84,30 @@ int main()
 
 	vector<vector<double>> mat3_1(n);
 	vector<vector<double>> mat3_2(m);
+#pragma omp parallel for
 	for (int i = 0; i < mat3_1.size(); i++) {
 		mat3_1[i].resize(m);
+#pragma omp parallel for
 		for (int j = 0; j < mat3_1[i].size(); j++) {
-			mat3_1[i][j] = ((rand() % 20001) - 10000) / 100;
+			mat3_1[i][j] = ((rand() % 2001) - 1000) / 100;
 		}
 	}
+#pragma omp parallel for
 	for (int i = 0; i < mat3_2.size(); i++) {
 		mat3_2[i].resize(n);
+#pragma omp parallel for
 		for (int j = 0; j < mat3_2[i].size(); j++) {
-			mat3_2[i][j] = ((rand() % 20001) - 10000) / 100;
+			mat3_2[i][j] = ((rand() % 2001) - 1000) / 100;
 		}
 	}
 	vector<vector<double>> res3(n);
+#pragma omp parallel for
 	for (int i = 0; i < res3.size(); i++) {
 		res3[i].resize(n);
+#pragma omp parallel for
 		for (int j = 0; j < mat3_2[0].size(); j++) {
 			res3[i][j] = 0;
+#pragma omp parallel for
 			for (int k = 0; k < mat3_1[0].size(); k++) {
 				res3[i][j] += mat3_1[i][k] * mat3_2[k][j];
 			}
