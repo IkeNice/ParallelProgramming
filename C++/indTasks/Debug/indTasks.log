@@ -1,2 +1,5 @@
 ﻿  ind1.cpp
+  ind2.cpp
+C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\indTasks\ind2.cpp(14,9): warning C4101: d: неиспользованная локальная переменная
+  Создание кода...
   indTasks.vcxproj -> C:\Users\hieut\OneDrive\Документы\Study_All\ParallelProgramming\C++\indTasks\Debug\indTasks.exe
